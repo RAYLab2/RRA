@@ -1,10 +1,14 @@
 @charset "UTF-8";
 /* 여기서부터 복사 */
 @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+/* 2025-10-02 해당 폰트 링크에 데이터가 없는 관계로 f1 폰트 사용하던 폰트들 Pretendard Variable 변경 */
 @font-face {
   font-family: "f1";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
 }
+
 @font-face {
   font-family: "f2";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff") format("woff");
@@ -20,27 +24,58 @@
   color: #333333;
   font-size: 16px;
 }
-.raylab body, .raylab div, .raylab dl, .raylab dt, .raylab dd, .raylab ul, .raylab ol, .raylab li, .raylab h1, .raylab h2, .raylab h3, .raylab h4, .raylab h5, .raylab h6, .raylab pre, .raylab code, .raylab form, .raylab fieldset, .raylab legend, .raylab input, .raylab textarea, .raylab p, .raylab blockquote, .raylab button {
+.raylab body,
+.raylab div,
+.raylab dl,
+.raylab dt,
+.raylab dd,
+.raylab ul,
+.raylab ol,
+.raylab li,
+.raylab h1,
+.raylab h2,
+.raylab h3,
+.raylab h4,
+.raylab h5,
+.raylab h6,
+.raylab pre,
+.raylab code,
+.raylab form,
+.raylab fieldset,
+.raylab legend,
+.raylab input,
+.raylab textarea,
+.raylab p,
+.raylab blockquote,
+.raylab button {
   margin: 0;
   padding: 0;
-  font-family: "f1", serif;
+  font-family: "Pretendard Variable", serif;
   box-sizing: border-box;
 }
 .raylab a {
-  font-family: "f1", serif;
+  font-family: "Pretendard Variable", serif;
   font-size: 16px;
 }
 .raylab li {
   list-style: none;
 }
+
+.raylab .arti li {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.6em;
+}
+
 .raylab h3 {
-  font-family: "f2", serif;
+  font-family: "f2", "Pretendard Variable", serif;
   color: #ffffff;
   font-size: 24px;
   font-weight: normal;
   line-height: 105px;
   position: relative;
   z-index: 2;
+  padding-left: 10px;
 }
 .raylab h3.type1 {
   text-align: center;
@@ -63,7 +98,7 @@
   background: url(https://RAYLab2.github.io/RRA/img/bg_heading02.png) no-repeat center center;
   position: absolute;
   top: 47%;
-  right: calc(100% - 160px);
+  right: calc(100% - 270px);
   transform: translateY(-50%);
   z-index: -1;
 }
@@ -122,19 +157,18 @@
   position: relative;
 }
 .raylab .list {
-  font-size: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 }
 .raylab .list li {
-  display: inline-block;
-  width: calc((100% - 48px) / 4);
-  margin-right: 16px;
-  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  vertical-align: top;
-  cursor: default;
 }
 .raylab .list li div {
-  width: 100%;
+  width: 100px;
   height: 100px;
   font-size: 76px;
   transform-origin: bottom;
@@ -153,12 +187,64 @@
 .raylab .list li p.red {
   color: orangered;
 }
-.raylab .list li:nth-child(4n) {
+.raylab .list li:nth-child(6n) {
   margin-right: 0;
 }
 .raylab .list li:hover div {
   animation: hov1 0.6s both;
 }
+
+/* 2025-10-02 */
+/* 레이랩 전형 절차 list를 위한 클래스 추가 */
+
+.raylab .procedurelist {
+  display: flex;
+}
+.raylab .procedurelist li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - 16px * 4) / 5);
+  margin-right: 16px;
+}
+
+.raylab .procedurelist li:last-child {
+  margin-right: 0;
+}
+
+.raylab .procedurelist li div {
+  width: 100%;
+  height: 100px;
+  font-size: 76px;
+  transform-origin: bottom;
+}
+.raylab .procedurelist li h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 24px 0 8px 0;
+}
+.raylab .procedurelist li p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1em;
+}
+.raylab .procedurelist li p.red {
+  color: orangered;
+}
+.raylab .procedurelist li:nth-child(6n) {
+  margin-right: 0;
+}
+
+.raylab .noti3 .procedurelist li:nth-child(5n) {
+  margin-right: 0;
+}
+
+.raylab .procedurelist li:hover div {
+  animation: hov1 0.6s both;
+}
+
+/* 레이랩 전형 절차 list를 위한 클래스 추가 끝*/
+
 .raylab .title .head {
   width: 100%;
   text-align: right;
@@ -169,7 +255,7 @@
   background-size: contain;
 }
 .raylab .title h1 {
-  font-size: 60px;
+  font-size: 48px;
   text-transform: uppercase;
   padding-bottom: 180px;
   margin-top: 120px;
@@ -179,23 +265,11 @@
   line-height: 1.2em;
 }
 .raylab .title h1 span {
-  color: #60358D;
-}
-.raylab .title h1 div:nth-child(1),
-.raylab .title h1 div:nth-child(2) {
-  font-family: "f3", serif;
-}
-.raylab .title h1 div:nth-child(3) {
-  margin-top: 16px;
-}
-.raylab .title h1 div:nth-child(3),
-.raylab .title h1 div:nth-child(4) {
-  font-size: 24px;
-  line-height: 1.5em;
+  color: #854bb8;
 }
 .raylab .title h2 {
-  font-size: 30px;
-  color: #60358D;
+  font-size: 24px;
+  color: #854bb8;
 }
 .raylab .title .sub {
   margin: 24px 0;
@@ -207,7 +281,7 @@
 }
 .raylab .title .info p {
   position: relative;
-  padding-left: 26px;
+  padding-left: 30px;
 }
 .raylab .title .info p:nth-child(1) {
   background: url(https://RAYLab2.github.io/RRA/img/about-1.png) no-repeat left center;
@@ -252,7 +326,7 @@
   text-align: right;
 }
 .raylab .noti1 .arti ul li.ans > span {
-  background-color: #60358D;
+  background-color: #60358d;
   color: #ffffff;
 }
 .raylab .noti1 .arti ul li.ans > span .after {
@@ -262,7 +336,7 @@
 }
 .raylab .noti1 .arti ul li.emoj > span {
   padding-right: 38px;
-  background: url(https://RAYLab2.github.io/RRA/img/speed-1.png) no-repeat right 12px center, #60358D;
+  background: url(https://RAYLab2.github.io/RRA/img/speed-1.png) no-repeat right 12px center, #60358d;
 }
 .raylab .noti1 .arti:nth-child(1) {
   font-size: 0;
@@ -286,11 +360,13 @@
 .raylab .noti2 .wrap {
   z-index: 2;
 }
+
+/* 레이랩 복지 배경 */
 .raylab .noti2 .wrap > .after {
   content: "";
   display: block;
   width: 100%;
-  height: 485px;
+  height: 425px;
   background: url(https://RAYLab2.github.io/RRA/img/line_row.png) repeat center, url(https://RAYLab2.github.io/RRA/img/line_span.png) repeat center;
   opacity: 0.15;
   position: absolute;
@@ -322,23 +398,38 @@
   background-size: contain;
   background: url(https://RAYLab2.github.io/RRA/img/welfare-6.png) no-repeat center center;
 }
-.raylab .noti2 .wrap .list li:nth-child(7) div {
+
+.raylab .noti2 .wrap .procedurelist li:nth-child(1) > div {
   background-size: contain;
-  background: url(https://RAYLab2.github.io/RRA/img/welfare-7.png) no-repeat center center;
+  background: url(https://RAYLab2.github.io/RRA/img/step-1.png) no-repeat center center;
 }
-.raylab .noti2 .wrap .list li:nth-child(8) div {
+.raylab .noti2 .wrap .procedurelist li:nth-child(2) > div {
   background-size: contain;
-  background: url(https://RAYLab2.github.io/RRA/img/welfare-8.png) no-repeat center center;
+  background: url(https://RAYLab2.github.io/RRA/img/step-2.png) no-repeat center center;
 }
+.raylab .noti2 .wrap .procedurelist li:nth-child(3) > div {
+  background-size: contain;
+  background: url(https://RAYLab2.github.io/RRA/img/step-3.png) no-repeat center center;
+}
+.raylab .noti2 .wrap .procedurelist li:nth-child(4) > div {
+  background-size: contain;
+  background: url(https://RAYLab2.github.io/RRA/img/step-4.png) no-repeat center center;
+}
+
+.raylab .noti2 .wrap .procedurelist li:nth-child(5) > div {
+  background-size: contain;
+  background: url(https://RAYLab2.github.io/RRA/img/step-5.png) no-repeat center center;
+}
+
 .raylab .noti2 .arti {
   margin-top: 60px;
 }
 .raylab .noti2 .arti p > b {
-  font-family: "Nanum Pen Script", serif;
+  font-family: "Pretendard Variable", serif;
   font-size: 24px;
 }
 .raylab .noti2 .arti p.point {
-  color: #60358D;
+  color: #60358d;
 }
 .raylab .noti2 .arti p.emoji1 {
   padding-right: 26px;
@@ -380,7 +471,7 @@
 .raylab .noti3 .wrap > .after {
   display: block;
   width: 100%;
-  height: 292px;
+  height: 230px;
   background: url(https://RAYLab2.github.io/RRA/img/bg_texture01.png) no-repeat center center;
   background-size: cover;
   position: absolute;
@@ -392,29 +483,34 @@
   padding-bottom: 40px;
   border-bottom: 4px dotted #dddddd;
 }
-.raylab .noti3 .wrap .list {
+.raylab .noti3 .wrap .procedurelist {
   margin-top: 24px;
   margin-bottom: 80px;
 }
-.raylab .noti3 .wrap .list p {
-  font-family: "f1", serif;
+.raylab .noti3 .wrap .procedurelist p {
+  font-family: "Pretendard Variable", serif;
   font-weight: normal;
 }
-.raylab .noti3 .wrap .list li:nth-child(1) > div {
+.raylab .noti3 .wrap .procedurelist li:nth-child(1) > div {
   background-size: contain;
   background: url(https://RAYLab2.github.io/RRA/img/step-1.png) no-repeat center center;
 }
-.raylab .noti3 .wrap .list li:nth-child(2) > div {
+.raylab .noti3 .wrap .procedurelist li:nth-child(2) > div {
   background-size: contain;
   background: url(https://RAYLab2.github.io/RRA/img/step-2.png) no-repeat center center;
 }
-.raylab .noti3 .wrap .list li:nth-child(3) > div {
+.raylab .noti3 .wrap .procedurelist li:nth-child(3) > div {
   background-size: contain;
   background: url(https://RAYLab2.github.io/RRA/img/step-3.png) no-repeat center center;
 }
-.raylab .noti3 .wrap .list li:nth-child(4) > div {
+.raylab .noti3 .wrap .procedurelist li:nth-child(4) > div {
   background-size: contain;
   background: url(https://RAYLab2.github.io/RRA/img/step-4.png) no-repeat center center;
+}
+
+.raylab .noti3 .wrap .procedurelist li:nth-child(5) > div {
+  background-size: contain;
+  background: url(https://RAYLab2.github.io/RRA/img/step-5.png) no-repeat center center;
 }
 
 .detail {
@@ -427,7 +523,7 @@
   padding-bottom: 110px;
   position: relative;
   z-index: 2;
-  font-family: "f2", serif;
+  font-family: "f2", "Pretendard Variable", serif;
   font-size: 24px;
   font-weight: normal;
 }
@@ -471,51 +567,62 @@
 .detail ul li {
   margin-top: 24px;
 }
-.detail ul li h6, .detail ul li p {
+.detail ul li h6,
+.detail ul li p {
   font-size: 16px;
 }
-.detail ul li h6 > span, .detail ul li p > span {
+.detail ul li h6 > span,
+.detail ul li p > span {
   margin-left: 4px;
   font-size: 0.9rem;
   color: purple;
 }
 .detail ul li h6 {
+  padding-top: 4px;
   margin-bottom: 4px;
-  padding-left: 26px;
+  padding-left: 32px;
 }
 .detail ul li p.point {
-  color: #60358D;
+  color: #60358d;
 }
 .detail ul li:nth-child(1) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-1.png) no-repeat left center;
+  height: 28px;
 }
 .detail ul li:nth-child(2) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-2.png) no-repeat left center;
+  height: 28px;
 }
 .detail ul li:nth-child(3) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-3.png) no-repeat left center;
+  height: 28px;
 }
 .detail ul li:nth-child(4) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-4.png) no-repeat left center;
+  height: 28px;
 }
 .detail ul li:nth-child(5) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-5.png) no-repeat left center;
+  height: 28px;
 }
 .detail ul li:nth-child(6) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-6.png) no-repeat left center;
+  height: 28px;
 }
 .detail ul li:nth-child(7) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-7.png) no-repeat left center;
+  height: 28px;
 }
 .detail ul li:nth-child(8) h6 {
   background: url(https://RAYLab2.github.io/RRA/img/job-8.png) no-repeat left center;
+  height: 28px;
 }
 .detail .after {
   width: 100%;
   max-width: 860px;
   height: 100px;
   padding: 8px 16px;
-  background-color: #60358D;
+  background-color: #60358d;
   font-family: "Nanum Pen Script", serif;
   font-size: 20px;
   color: #ffffff;
@@ -562,7 +669,8 @@
     transform: scaleY(1) scaleX(1) translateY(0);
   }
 }
-@media screen and (max-width: 767px) {
+/* 2025-10-02 기존 767 -> 884*/
+@media screen and (max-width: 884px) {
   .raylab {
     padding-top: 16px;
   }
@@ -570,7 +678,9 @@
     padding: 0 16px;
   }
   .raylab .list li {
-    width: calc((100% - 16px) / 2);
+    /* width: calc((100% - 16px) / 2); */
+    margin-right: 14px;
+    text-align: center;
   }
   .raylab .list li:nth-child(1) > div {
     animation: hov2 3s 7.98s infinite;
@@ -604,7 +714,7 @@
     margin-right: 0;
   }
   .raylab .title h1 div {
-    font-size: 13vw;
+    font-size: 10vw;
   }
   .raylab .noti1 .arti {
     text-align: center;
@@ -632,7 +742,7 @@
     padding-bottom: 54vw;
   }
   .raylab .noti2 .wrap > .after {
-    height: 1076px;
+    height: 460px;
   }
   .raylab .noti2 .arti p {
     text-align: right;
@@ -656,17 +766,70 @@
     margin-top: 8px;
   }
   .raylab .noti3 .wrap > .after {
-    height: calc(480px + 30%);
+    height: 260px;
   }
-  .raylab .noti3 .list li {
+  .raylab .noti3 .procedurelist li {
     width: 100%;
     margin-right: 0;
   }
   .raylab .noti3 p {
     margin-top: 8px;
   }
+
   .raylab .detail ul li h6 > span {
     display: block;
     margin-left: 0;
   }
-}/*# sourceMappingURL=rra.css.map */
+
+  .raylab .procedurelist li {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .raylab .procedurelist li div {
+    width: 50px;
+    height: 50px;
+    font-size: 38px;
+  }
+
+  .raylab .noti2 .wrap .procedurelist li:nth-child(1) > div {
+    background-size: 3.125rem;
+  }
+  .raylab .noti2 .wrap .procedurelist li:nth-child(2) > div {
+    background-size: 3.125rem;
+  }
+  .raylab .noti2 .wrap .procedurelist li:nth-child(3) > div {
+    background-size: 3.125rem;
+  }
+  .raylab .noti2 .wrap .procedurelist li:nth-child(4) > div {
+    background-size: 3.125rem;
+  }
+  .raylab .noti2 .wrap .procedurelist li:nth-child(5) > div {
+    background-size: 3.125rem;
+  }
+
+  .sizechange {
+    height: 220px !important;
+  }
+} /*# sourceMappingURL=rra.css.map */
+
+.point {
+  color: #854bb8;
+}
+
+.noti3_point {
+  font-size: 16px;
+}
+
+.noti3_point li {
+  margin: 30px 0;
+  background: url(https://RAYLab2.github.io/RRA/img/check.png) no-repeat left center;
+  padding-left: 30px;
+  word-break: keep-all;
+}
+
+.noti3_point li:first-child {
+  margin-top: 10px;
+}
