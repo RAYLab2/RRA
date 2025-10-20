@@ -199,17 +199,20 @@
 
 .raylab .procedurelist {
   display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .raylab .procedurelist li {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: calc((100% - 16px * 4) / 5);
-  margin-right: 16px;
+  height: 167px;
 }
 
-.raylab .procedurelist li:last-child {
-  margin-right: 0;
+.raylab .procedurelist li:nth-child(even) {
+  width: 18px;
+  height: 18px;
 }
 
 .raylab .procedurelist li div {
@@ -405,24 +408,24 @@
 }
 
 .raylab .noti2 .wrap .procedurelist li:nth-child(1) > div {
-  background-size: contain;
+  background-size: contain !important;
   background: url(https://RAYLab2.github.io/RRA/img/step-1.png) no-repeat center center;
 }
-.raylab .noti2 .wrap .procedurelist li:nth-child(2) > div {
-  background-size: contain;
+.raylab .noti2 .wrap .procedurelist li:nth-child(3) > div {
+  background-size: contain !important;
   background: url(https://RAYLab2.github.io/RRA/img/step-2.png) no-repeat center center;
 }
-.raylab .noti2 .wrap .procedurelist li:nth-child(3) > div {
-  background-size: contain;
+.raylab .noti2 .wrap .procedurelist li:nth-child(5) > div {
+  background-size: contain !important;
   background: url(https://RAYLab2.github.io/RRA/img/step-3.png) no-repeat center center;
 }
-.raylab .noti2 .wrap .procedurelist li:nth-child(4) > div {
-  background-size: contain;
+.raylab .noti2 .wrap .procedurelist li:nth-child(7) > div {
+  background-size: contain !important;
   background: url(https://RAYLab2.github.io/RRA/img/step-4.png) no-repeat center center;
 }
 
-.raylab .noti2 .wrap .procedurelist li:nth-child(5) > div {
-  background-size: contain;
+.raylab .noti2 .wrap .procedurelist li:nth-child(9) > div {
+  background-size: contain !important;
   background: url(https://RAYLab2.github.io/RRA/img/step-5.png) no-repeat center center;
 }
 
@@ -750,6 +753,7 @@
     background-size: 80vw;
     padding-bottom: 54vw;
   }
+
   .raylab .noti2 .wrap > .after {
     height: 395px;
   }
@@ -780,6 +784,19 @@
   .raylab .noti3 .procedurelist li {
     width: 100%;
     margin-right: 0;
+  }
+  
+  .raylab .procedurelist {
+    gap: 10px;
+  }
+
+  .raylab .procedurelist li:nth-child(even) {
+    width: 12px;
+    height: 12px;
+  }
+  .raylab .procedurelist li:nth-child(even) > img {
+    width: 12px;
+    height: 12px;
   }
   .raylab .noti3 p {
     margin-top: 8px;
