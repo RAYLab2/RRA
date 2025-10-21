@@ -678,7 +678,7 @@
   }
 }
 /* 2025-10-02 기존 767 -> 884*/
-@media screen and (max-width: 884px) {
+@media screen and (max-width: 767px) {
   .raylab {
     padding-top: 16px;
   }
