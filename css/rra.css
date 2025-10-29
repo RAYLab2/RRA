@@ -678,7 +678,8 @@
   }
 }
 /* 2025-10-02 기존 767 -> 884*/
-@media screen and (max-width: 884px) {
+/* 사람인 공고 반응형으로 인한 반응형 수치 원복 */
+@media screen and (max-width: 767px) {
   .raylab {
     padding-top: 16px;
   }
