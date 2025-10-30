@@ -145,8 +145,9 @@ h2 {
 
 @media screen and (max-width: 768px) {
   .part1_text {
-    background-position-x: -50px;
-    background-position-y: -10px;
+    background-position-x: 24px;
+    background-position-y: 53px;
+    background-size: contain;
   }
 }
 
@@ -271,7 +272,7 @@ h2 {
 
   .part3 .text .list li {
     word-break: keep-all;
-  } 
+  }
 }
 
 /* part3 */
@@ -596,7 +597,7 @@ h2 {
 
 @media screen and (max-width: 768px) {
   .part8 {
-    height: 1340px;
+    height: 1260px;
     word-break: keep-all;
   }
 
