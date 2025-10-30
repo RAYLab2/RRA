@@ -510,7 +510,7 @@ body {
 
 .part8 {
   position: relative;
-  height: 1430px;
+  height: 1285px;
 }
 
 .part8 .title {
@@ -590,7 +590,7 @@ body {
 
 @media screen and (max-width: 884px) {
   .part8 {
-    height: 1490px;
+    height: 1340px;
     word-break: keep-all;
   }
 
