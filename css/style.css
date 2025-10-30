@@ -129,7 +129,7 @@ body {
 .part1_text {
   font-size: 48px;
   font-weight: bold;
-  background-image: url(/img/symbol_ray_charactor.png);
+  background-image: url(https://RAYLab2.github.io/RRA/img/symbol_ray_charactor.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 0;
@@ -209,7 +209,7 @@ body {
 }
 
 .part3 .text {
-  background-image: url(/img/back-noti2.png);
+  background-image: url(https://RAYLab2.github.io/RRA/img/back-noti2.png);
   background-repeat: no-repeat;
   padding: 50px;
   position: absolute;
@@ -361,7 +361,7 @@ body {
 }
 
 .part5 .text {
-  background-image: url(/img/bg_texture01.png);
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_texture01.png);
   background-repeat: no-repeat;
   padding: 50px;
   position: absolute;
@@ -423,7 +423,7 @@ body {
 }
 
 .part6 .text {
-  background-image: url(/img/back-noti2.png);
+  background-image: url(https://RAYLab2.github.io/RRA/img/back-noti2.png);
   background-repeat: no-repeat;
   padding: 70px 30px 50px;
   position: absolute;
@@ -544,7 +544,7 @@ body {
 }
 
 .part8 .text {
-  background-image: url(/img/bg_texture02.png);
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_texture02.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 180px 45px 50px;
