@@ -118,6 +118,10 @@ body {
   gap: 60px;
 }
 
+h2 {
+  font-size: 24px;
+}
+
 @media screen and (max-width: 768px) {
   .wrap {
     padding: 10px;
@@ -281,6 +285,7 @@ body {
 
 .part4 .title {
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .office_photo {
@@ -510,7 +515,7 @@ body {
 
 .part8 {
   position: relative;
-  height: 1285px;
+  height: 1223px;
 }
 
 .part8 .title {
