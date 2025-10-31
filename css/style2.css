@@ -393,8 +393,11 @@ div {
   width: 82px;
   height: 82px;
 }
-
 .part6 .list li:nth-child(even) {
+  width: 18px;
+  height: 18px;
+}
+.part6 .list li:nth-child(even) img {
   width: 18px;
   height: 18px;
 }
