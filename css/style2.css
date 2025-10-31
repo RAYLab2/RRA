@@ -89,6 +89,10 @@ div {
   font-size: 16px;
 }
 
+.f-family {
+  font-family: "Pretendard Variable", serif !important;
+}
+
 .point {
   color: #854bb8;
 }
