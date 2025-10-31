@@ -1,0 +1,538 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 리셋 구문 */
+
+/* 키프레임 */
+
+@keyframes hov1 {
+  0% {
+    transform: scaleY(1);
+  }
+  30% {
+    transform: scaleY(0.8) scaleX(1.2);
+  }
+  65% {
+    transform: scaleY(1.1) scaleX(0.9) translateY(-8px);
+  }
+  85% {
+    transform: scaleY(0.95) scaleX(1.01) translateY(0);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1) translateY(0);
+  }
+}
+
+/* 키프레임 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard Variable", serif !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1.25 !important;
+  color: #2a2a2a !important;
+  font-size: 16px;
+}
+
+div {
+  font-family: "Pretendard Variable", serif !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1.25 !important;
+  color: #2a2a2a !important;
+  font-size: 16px;
+}
+
+.point {
+  color: #854bb8;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.regular {
+  font-weight: 500;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 80px auto 0;
+}
+
+.header {
+  width: 100%;
+  padding: 0 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap {
+    max-width: 860px;
+    margin: 30px auto 0;
+  }
+
+  .header {
+    padding: 0 10px;
+  }
+}
+
+/* part1 */
+.part1 {
+  width: 100%;
+  padding: 80px;
+  background-image: url(https://RAYLab2.github.io/RRA/img/symbol_ray_charactor.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position-x: 95%;
+  background-position-y: 10%;
+}
+
+.part1_text {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .part1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-size: 101%;
+    background-position-x: -500%;
+    background-position-y: 30%;
+  }
+  .part1_text {
+    font-size: 36px;
+  }
+}
+
+/* part2 */
+.part2 {
+  padding: 0 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-image: url(https://RAYLab2.github.io/RRA/img/line_row.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 0;
+  background-position-y: bottom;
+}
+
+.part2 h2 {
+  font-size: 24px;
+}
+
+.part2_text li {
+  line-height: 30px;
+}
+
+.part2_about {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.part2_about li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .part2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* part3 */
+.part3 {
+  position: relative;
+  padding-top: 110px;
+}
+
+.part3_title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  font-size: 24px;
+  color: #fff !important;
+  text-align: center;
+  line-height: 70px;
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_heading01.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 390px 100px;
+}
+
+.part3 .list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 10px;
+  justify-content: center;
+  background-image: url(https://RAYLab2.github.io/RRA/img/back-noti2.png);
+  background-repeat: no-repeat;
+  padding: 90px 60px 50px;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.part3 .list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-weight: 600;
+  word-break: keep-all;
+}
+
+.part3 .list li img {
+  transform-origin: bottom center;
+}
+
+.part3 .list li:hover img {
+  animation: hov1 0.6s both;
+}
+
+/* part4 */
+.part4 {
+  padding: 80px 80px 0;
+}
+
+.part4_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.office_photo1 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-rows: 240px auto;
+}
+
+.office_photo2 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 240px auto;
+}
+
+.photo_container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .part4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* part5 */
+.part5 {
+  position: relative;
+  padding-top: 110px;
+}
+
+.part5_title {
+  position: absolute;
+  top: 20%;
+  left: 9%;
+  width: 360px;
+  font-size: 24px;
+  color: #fff !important;
+  line-height: 70px;
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_heading02.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 390px 100px;
+  padding-left: 6%;
+}
+
+.part5 .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_texture01.png);
+  background-repeat: no-repeat;
+  padding: 70px 100px 50px;
+  background-position-x: center;
+  background-position-y: center;
+}
+.part5 .list li {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .part5_title {
+    left: 0;
+  }
+  .part5 .list {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .part5 .list li {
+    gap: 15px;
+    word-break: keep-all;
+  }
+}
+
+/* part6 */
+.part6 {
+  position: relative;
+  padding-top: 110px;
+}
+
+.part6_title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 290px;
+  font-size: 24px;
+  color: #fff !important;
+  text-align: center;
+  line-height: 70px;
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_heading01.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 290px 100px;
+}
+
+.part6 .list {
+  display: flex;
+  background-image: url(https://RAYLab2.github.io/RRA/img/back-noti2.png);
+  background-repeat: no-repeat;
+  padding: 90px 60px 50px;
+  background-position-x: center;
+  background-position-y: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.part6 .list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-weight: 600;
+  word-break: keep-all;
+  height: 162px;
+}
+
+.part6 .list li img {
+  width: 82px;
+  height: 82px;
+}
+
+.part6 .list li:nth-child(even) {
+  width: 18px;
+  height: 18px;
+}
+
+.part6 .list li img {
+  transform-origin: bottom center;
+}
+
+.part6 .list li:hover img {
+  animation: hov1 0.6s both;
+}
+
+@media screen and (max-width: 768px) {
+  .part6 .list {
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* part7 */
+.part7 {
+  padding: 80px;
+}
+
+.part7 .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .part7 {
+    padding-left: 20px;
+    padding-right: 20px;
+    word-break: keep-all;
+  }
+}
+
+/* part8 */
+.part8 {
+  position: relative;
+  padding-top: 10%;
+}
+.part8_title_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.part8_title {
+  position: relative;
+  width: 450px;
+  height: 230px;
+  font-size: 24px;
+  color: #fff !important;
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_heading03.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 450px 230px;
+}
+
+.title_1 {
+  position: absolute;
+  top: 37%;
+  left: 46%;
+  font-size: 24px;
+  color: #2a2a2a;
+}
+
+.title_2 {
+  position: absolute;
+  top: 70%;
+  left: 26%;
+  font-size: 24px;
+  text-align: center;
+}
+
+.part8 .list {
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://RAYLab2.github.io/RRA/img/bg_texture02.png);
+  background-repeat: no-repeat;
+  padding: 150px 80px 50px;
+  background-position-x: center;
+  background-position-y: center;
+  gap: 40px;
+}
+
+.sub_title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  gap: 8px;
+}
+
+.sub_title img {
+  width: 24px;
+  height: 24px;
+}
+
+.part8 .list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.ending {
+  width: 100%;
+  height: 150px;
+  text-align: right;
+  padding: 14px;
+  background-color: #854bb8;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+  .part8_title_container {
+    left: -30px;
+    top: -50px;
+  }
+
+  .title_1 {
+    /* top: 40%; */
+  }
+
+  .title_2 {
+    /* top: 69%; */
+    /* left: 29%; */
+  }
+
+  .part8 .list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
