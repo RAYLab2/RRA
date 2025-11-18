@@ -258,6 +258,13 @@ div {
   animation: hov1 0.6s both;
 }
 
+@media screen and (max-width: 768px) {
+  .part3 .list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 /* part4 */
 .part4 {
   padding: 80px 80px 0;
